@@ -27,9 +27,11 @@
     <style type="text/css">
         #our-story{
             background: #4D021B;
-        #map {
+        }
+        #map{
             height: 400px;
             width: 100%;
+            background-color: grey;
        }
 
         }
@@ -406,6 +408,38 @@
             </div>
         </div>
     </section>
+
+    <!-- google maps -->
+   <section id="maps">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">See On Maps</h2>
+                    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key= AIzaSyBPCtkaojsY5yX7fnL_scMOCHbFdIUcPCI &callback=initMap">
+    </script>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- maps section closed-->
 
     <!-- Contact Section -->
     <section id="contact">
